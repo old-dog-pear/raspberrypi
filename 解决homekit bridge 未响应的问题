@@ -1,0 +1,2 @@
+重新创建一个以host模式启动的docker镜像
+docker run -d --name="hass" --network=host -v /Docker:/config homeassistant/home-assistant
