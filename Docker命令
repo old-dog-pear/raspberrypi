@@ -1,0 +1,17 @@
+查看你本地的 Docker 镜像
+  docker images
+删除镜像
+  docker rmi [REPOSITORY]:[TAG]
+运行镜像
+  docker run XXXX
+后台运行镜像
+  docker run -d XXXX
+查看端口映射
+  docker ps
+端口映射
+  docker run -d -p 8080:80 XXXX
+  //将主机的 8080 端口映射到容器的 80 端口
+停止镜像
+  docker stop
+重启镜像
+  sudo docker restart XXXX
