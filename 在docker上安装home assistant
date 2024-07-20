@@ -1,0 +1,10 @@
+查找镜像
+  sudo docker search home-assistant
+拉取镜像
+  docker pull homeassistant/home-assistant:latest
+运行并创建容器
+  docker run -d --name="home-assistants" -v /[存放该容器配置路径]:/config -p 8123:8123 homeassistant/home-assistant
+  //-d：后台运行容器（分离模式）
+  //指定名字home-assistants
+  //-p 8123:8123————将主机的 8123 端口映射到容器的 8123 端口
+  //可以通过访问主机的 http://localhost:8123 来访问 Home Assistant 的 Web 界面
