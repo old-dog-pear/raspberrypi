@@ -1,0 +1,13 @@
+利用软路由或者openWRT的passwall实现连接docker下载
+下载安装 Docker 测试版本
+  curl -fsSL https://test.docker.com -o test-docker.sh
+  sudo sh test-docker.sh
+卸载 docker
+  sudo apt-get purge docker-ce
+删除镜像、容器、配置文件
+  sudo rm -rf /var/lib/docker
+测试镜像
+  sudo docker run hello-world
+  //会从 Docker Hub（默认的镜像仓库）下载这个镜像
+  //hello-world 是一个非常简单的 Docker 镜像，用于验证 Docker 是否正确安装和运行
+  //这个程序会输出一段 "Hello from Docker!" 的信息，说明 Docker 运行正常
