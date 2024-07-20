@@ -1,0 +1,19 @@
+准备工作：安装Git
+  sudo apt install git
+拉取GitHub上的rpitx
+  git clone https://github.com/F5OEO/rpitx
+进入下载好的文件夹
+  cd rpitx
+运行shell脚本安装rpitx
+  ./install.sh
+  //安装过程中终端会提示  修改 /boot/config.txt-将GPU的频率锁为250Mhz，并设置force_turbo=1强制超频，同意后重启raspberrypi
+  //这条命令的作用是强制树莓派一直以最高频率运行，而不进入省电模式
+在GPIO 7[PO4]上插一根杜邦线作为天线
+阅读README.md得知打开./easytest.sh就可以进入FM发射界面
+在终端中输入一个当前地区法定的收音范围【China-87.5~108】
+选择FmRds
+  //FmRds 是指调频无线电数据系统
+播放测试
+  sudo ./pifmrds -freq [frequency] -audio [filename.wav]
+  //例如，如果你想要在 100.0 MHz 频率上广播名为 example.wav 的音频文件
+  //sudo ./pifmrds -freq 100.0 -audio example.wav
