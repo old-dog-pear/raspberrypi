@@ -1,0 +1,6 @@
+终端输入
+sudo docker exec -it XXXX bash
+
+wget -O - https://get.hacs.xyz | bash -
+exit
+重启HA
